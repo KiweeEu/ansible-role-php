@@ -7,6 +7,7 @@
     name: "{{ php_packages + php_packages_extra }}"
     state: "{{ php_packages_state }}"
     install_recommends: "{{ php_install_recommends }}"
+    allow_downgrade: "{{ php_allow_downgrade }}"
   register: php_package_install
   notify: restart webserver
 
